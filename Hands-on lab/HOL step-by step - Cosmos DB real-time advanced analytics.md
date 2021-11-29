@@ -273,9 +273,21 @@ We will be exploring files in the Synapse Analytics workspace's primary ADLS Gen
 
     ![The add button is highlighted.](media/role-assignments-add-button.png "Add")
 
-5. In the add role assignment form, select the **Storage Blob Data Contributor** role, search for and select your Azure user account, then select **Save**.
+5. In the add role assignment form, search for **Storage Blob Data Contributor** in Role and select it, Click on Next.
 
-    ![The form is displayed as described.](media/add-role-assignment-form.png "Add role assignment")
+    ![The form is displayed as described.](media/role-storageblob.png "Add role assignment")
+    
+6. In Members pane, for **Assign access to** select **User, group, or service principle** and for **Members** click on **+Select Members**.
+
+    ![The form is displayed as described.](media/assign-member.png "Add role assignment")
+    
+    - A Select members pane appears, search and add the member and select.
+    
+    ![The form is displayed as described.](media/selected-member.png "Add role assignment")
+    
+7. After adding the Member, then select **Review + Assign**.
+
+    ![The form is displayed as described.](media/review-assign-role.png "Add role assignment")
 
 ### Task 2: Open Synapse Studio
 
@@ -599,7 +611,7 @@ In the notebook, you deployed the model to Azure Container Instances (ACI) and t
 
 ### Task 4: Test the predictive maintenance model
 
-1. Open a command prompt and run the following command, replacing `{YOUR CONTAINER LOCATION}` at the end of the command with the URI of your Azure Container Instance.
+1. Open a command prompt and run the following command, replacing `{YOUR CONTAINER LOCATION}` at the end of the command with the URI of your Azure Container Instance i.e, **REST endpoint** which copied in the previous task.
 
     ```cmd
     curl -X POST -H "Content-Type: application/json" -d "{\"data\": [{\"accountID\":\"A985156985579195\",\"browserLanguage\":\"en-AU\",\"cardType\":\"VISA\",\"cvvVerifyResult\":\"M\",\"digitalItemCount\":1,\"ipCountryCode\":\"au\",\"ipPostcode\":\"3000\",\"ipState\":\"victoria\",\"isProxyIP\":false,\"localHour\":19.0,\"paymentBillingCountryCode\":\"AU\",\"paymentBillingPostalCode\":\"3122\",\"paymentBillingState\":\"Victoria\",\"paymentInstrumentType\":\"CREDITCARD\",\"physicalItemCount\":0,\"transactionAmount\":99.0,\"transactionAmountUSD\":103.48965,\"transactionCurrencyCode\":\"AUD\",\"transactionDate\":20130409,\"transactionID\":\"5EAC1EBD-1428-4593-898E-F4B56BC3FA06\",\"transactionIPaddress\":121.219,\"transactionTime\":95040},{\"accountID\":\"A985156966855837\",\"browserLanguage\":\"en-AU\",\"cardType\":\"VISA\",\"cvvVerifyResult\":\"M\",\"digitalItemCount\":0,\"ipCountryCode\":\"us\",\"ipPostcode\":\"14534\",\"ipState\":\"new york\",\"isProxyIP\":false,\"localHour\":null,\"paymentBillingCountryCode\":\"AU\",\"paymentBillingPostalCode\":\"2209\",\"paymentBillingState\":\"New South Wales\",\"paymentInstrumentType\":\"CREDITCARD\",\"physicalItemCount\":1,\"transactionAmount\":679.0,\"transactionAmountUSD\":709.79265,\"transactionCurrencyCode\":\"AUD\",\"transactionDate\":20130409,\"transactionID\":\"48C88D1C-3705-472B-A4A3-5FCE45A5429B\",\"transactionIPaddress\":216.15,\"transactionTime\":94256},{\"accountID\":\"A844428012992486\",\"browserLanguage\":\"nn-NO\",\"cardType\":\"MC\",\"cvvVerifyResult\":\"M\",\"digitalItemCount\":1,\"ipCountryCode\":\"no\",\"ipPostcode\":\"1006\",\"ipState\":\"oslo\",\"isProxyIP\":false,\"localHour\":10.0,\"paymentBillingCountryCode\":\"NO\",\"paymentBillingPostalCode\":\"7033\",\"paymentBillingState\":null,\"paymentInstrumentType\":\"CREDITCARD\",\"physicalItemCount\":0,\"transactionAmount\":1099.0,\"transactionAmountUSD\":199.75424,\"transactionCurrencyCode\":\"NOK\",\"transactionDate\":20130409,\"transactionID\":\"13B2A110-EA04-42CD-88CC-A85814A5C961\",\"transactionIPaddress\":94.246,\"transactionTime\":95257},{\"accountID\":\"A1055521358474530\",\"browserLanguage\":\"en-US\",\"cardType\":\"AMEX\",\"cvvVerifyResult\":\"M\",\"digitalItemCount\":0,\"ipCountryCode\":\"ae\",\"ipPostcode\":\"0\",\"ipState\":\"dubayy\",\"isProxyIP\":false,\"localHour\":14.0,\"paymentBillingCountryCode\":\"US\",\"paymentBillingPostalCode\":\"33071\",\"paymentBillingState\":\"FL\",\"paymentInstrumentType\":\"CREDITCARD\",\"physicalItemCount\":4,\"transactionAmount\":2405.33,\"transactionAmountUSD\":2405.33,\"transactionCurrencyCode\":\"USD\",\"transactionDate\":20130409,\"transactionID\":\"C34F7C20-6203-42F5-A41B-AF26177345BE\",\"transactionIPaddress\":92.97,\"transactionTime\":102958},{\"accountID\":\"A844428033864668\",\"browserLanguage\":\"it-IT\",\"cardType\":\"VISA\",\"cvvVerifyResult\":\"U\",\"digitalItemCount\":1,\"ipCountryCode\":\"it\",\"ipPostcode\":\"39100\",\"ipState\":\"bolzano\",\"isProxyIP\":false,\"localHour\":11.0,\"paymentBillingCountryCode\":\"IT\",\"paymentBillingPostalCode\":\"50133\",\"paymentBillingState\":\"Firenze\",\"paymentInstrumentType\":\"CREDITCARD\",\"physicalItemCount\":0,\"transactionAmount\":269.0,\"transactionAmountUSD\":362.5582,\"transactionCurrencyCode\":\"EUR\",\"transactionDate\":20130409,\"transactionID\":\"C78542E6-0951-4B63-B420-BEF750B98BCD\",\"transactionIPaddress\":95.229,\"transactionTime\":103514}]}" http://{YOUR CONTAINER LOCATION}/score
