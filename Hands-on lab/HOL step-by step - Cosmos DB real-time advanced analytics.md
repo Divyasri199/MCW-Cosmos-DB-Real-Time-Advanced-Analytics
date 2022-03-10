@@ -157,6 +157,8 @@ Next, you will configure the payment transaction data generator project by compl
 
     > **Note**: If you are asked to upgrade the solution, which may occur if you are using Visual Studio 2019, select **OK**.
 
+    > **Info** : If you are prompted with sign in page, sign in into Visual Studio using the credentials from Environment details page.
+
 10. Double-click `appsettings.json` in the Solution Explorer to open it. This file contains the settings used by the console app to connect to your Azure services and to configure application behavior settings. The console app is programmed to either use values stored in this file, or within the machine's environment variables. This makes you capable of distributing the executable or containerizing it and passing in environment variables via the command line.
 
     ![appsettings.json is highlighted in the Visual Studio Solution Explorer.](media/solution-explorer.png 'Solution Explorer')
