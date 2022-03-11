@@ -620,6 +620,10 @@ In this task, you will use a notebook to prepare a model used to detect suspicio
 1. Navigate back to **Notebooks** and select the **Prepare batch scoring model.ipynb** notebook.
 
     ![The batch scoring notebook is highlighted.](media/select-batch-notebook.png "Notebooks")
+    
+1. Make sure you select **Kernel Idel** as **Python 3.6- Azure ML** before proceeding with next step.
+
+    ![](media/AzureML.png)
 
 2. Open the context menu **(1)** and select **Editors (2) > Edit in Jupyter (3)** to open the notebook in the Jupyter editor, which provides an enhanced notebook experience.
 
