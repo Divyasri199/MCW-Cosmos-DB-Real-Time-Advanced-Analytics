@@ -703,7 +703,7 @@ To do this you will create a Synapse Analytics pipeline with a copy activity. Sy
    | SAS URL           | `https://solliancepublicdata.blob.core.windows.net/mcw-cosmosdb`                         |
    | SAS token                   | _enter `''`_                                   |
 
-   ![The form is configured as described.](media/new-linked-service-blob-form.png "New linked service")
+   ![The form is configured as described.](media/testconnection.png)
 
 ### Task 4: Create copy pipeline
 
